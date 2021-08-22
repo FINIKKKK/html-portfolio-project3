@@ -17,16 +17,16 @@ $(window).scroll(() => {
 
 
 $(document).ready(function () {
-    
+
     $(function () {
         $('.accordion').find('.accordion__item-header').click(function () {
 
             $('.accordion__item').removeClass('accordion__item--active');
-            
+
             $(this).next().slideDown('fast');
-            
+
             $('.accordion__item-answer').not($(this).next()).slideUp('slow');
-            
+
             $(this).parent().addClass('accordion__item--active');
         });
     });
@@ -47,6 +47,10 @@ $(document).ready(function () {
         $('.header-mobile').toggleClass('btn--active');
     });
 
+    $(".characteristic__item-btn").on('click', function () {
+        $(".characteristic__item").removeClass("characteristic__item--active");
+        $(this).parent().addClass("characteristic__item--active");
+    })
 
 });
 

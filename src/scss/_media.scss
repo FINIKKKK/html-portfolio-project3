@@ -1,7 +1,6 @@
 //Max-Width: 1200px ================================
 @media (max-width: 1200px) {
-    .top,
-    .characteristic {
+    .top {
         display: none;
     }
     .info__welcome-title {
@@ -33,10 +32,54 @@
 
 //Max-Width: 1100px ================================
 @media (max-width: 1100px) {
+    .characteristic__item-title {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .characteristic__item-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .characteristic__item:nth-child(1) {
+        right: 35px;
+        top: 32%;
+        .characteristic__item-arrow {
+            bottom: -100%;
+        }
+        .characteristic__item-btn {
+            bottom: -106%;
+        }
+    }
+    .characteristic__item:nth-child(2) {
+        top: 31%;
+        left: 44%;
+        .characteristic__item-arrow {
+            bottom: -101%;
+        }
+        .characteristic__item-btn {
+            bottom: -109%;
+        }
+    }
+    .characteristic__item:nth-child(3) {
+        right: 90px;
+        bottom: 30%;
+        .characteristic__item-arrow {
+            bottom: -36%;
+        }
+    }
 }
 
 //Max-Width: 1000px ================================
 @media (max-width: 1000px) {
+    .characteristic__item:nth-child(1) {
+        right: -7px;
+    }
+    .characteristic__item:nth-child(2) {
+        left: 47%;
+    }
+    .characteristic__item:nth-child(3) {
+        right: 46px;
+    }
     .info__content-img {
         width: 320px;
         height: 320px;
@@ -71,6 +114,17 @@
 
 //Max-Width: 900px ================================
 @media (max-width: 900px) {
+    .characteristic__item:nth-child(1) {
+        right: -48px;
+        top: 28%;
+    }
+    .characteristic__item:nth-child(2) {
+        left: 48%;
+    }
+    .characteristic__item:nth-child(3) {
+        right: -6px;
+        bottom: 32%;
+    }
     .info__content-pattern {
         width: 1200px;
         height: auto;
@@ -123,6 +177,42 @@
 
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
+    .characteristic__item-arrow img {
+        width: 70%;
+        height: 70%;
+    }
+    .characteristic__item:nth-child(1) {
+        right: -37px;
+        top: 30%;
+        .characteristic__item-arrow {
+            right: 21px;
+        }
+        .characteristic__item-btn {
+            bottom: -85%;
+            left: -36%;
+        }
+    }
+    .characteristic__item:nth-child(2) {
+        left: 45%;
+        top: 32%;
+        .characteristic__item-arrow {
+            right: 8%;
+        }
+        .characteristic__item-btn {
+            bottom: -85%;
+            left: -36%;
+        }
+    }
+    .characteristic__item:nth-child(3) {
+        .characteristic__item-arrow {
+            left: -28%;
+            bottom: -45%;
+        }
+        .characteristic__item-btn {
+            position: absolute;
+            left: -31%;
+        }
+    }
     .hamburger {
         display: flex !important;
     }
@@ -165,7 +255,7 @@
             }
         }
     }
-   
+
     .faq .accordion {
         padding: 0;
     }
@@ -286,6 +376,40 @@
 
 //Max-Width: 700px ================================
 @media (max-width: 700px) {
+    .characteristic__inner {
+        padding: 200px 0 170px;
+    }
+    .characteristic__img {
+        margin-bottom: 60px;
+    }
+    .characteristic__item {
+        text-align: center;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        position: relative;
+        margin: 0 25px;
+        width: 150px;
+        margin-bottom: 50px;
+    }
+    .characteristic__item-title,
+    .characteristic__item-text {
+        pointer-events: auto;
+        opacity: 1;
+        top: 0;
+    }
+    .characteristic__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .characteristic__item-arrow,
+    .characteristic__item-btn {
+        display: none;
+    }
+    
     .info__content-pattern {
         width: 1200px;
         left: 60%;
@@ -330,6 +454,9 @@
 
 //Max-Width: 600px ================================
 @media (max-width: 600px) {
+    .characteristic__img {
+        width: 100%;
+    }
     .menu__list .menu__list-item {
         font-size: 34px;
         line-height: 60px;
@@ -467,6 +594,9 @@
 
 //Max-Width: 500px ================================
 @media (max-width: 500px) {
+    .characteristic__item {
+        width: 100%;
+    }
     .info__inner::before {
         width: 75%;
     }
