@@ -3,7 +3,6 @@
 
 
 // Plugins ----------------
-@@include('../js/slick.min.js');
 
 
 // Main-JS -----------------

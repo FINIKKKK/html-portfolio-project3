@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,700" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
-        rel="stylesheet" />
 
 </head>
 
@@ -60,14 +57,19 @@
 
     <!-- top
     ======================================================= -->
-    <section class="top">
-        <div class="container">
+    <section class="top" id="first-screen">
             <div class="top__inner">
                 <h1 class="top__title">MAVIC 2 PRO</h1>
-                <img src="./img/top-mavic.png" alt="" class="top-mavic">
-                <img src="./img/top-png.png" alt="" class="top-png">
+                <div class="top-bg">
+                    <img src="./img/bg--top.jpg" alt="">
+                </div>
+                <div class="top-mavic">
+                    <img src="./img/mavic.png" alt="">
+                </div>
+                <div class="top-leaves">
+                    <img src="./img/leaves.png" alt="">
+                </div>
             </div>
-        </div>
     </section><!-- top end -->
 
 
@@ -84,7 +86,7 @@
                     <img src="./img/pattern.png" alt="" class="about__content-pattern">
                 </div>
                 <div class="about__img">
-                    <img src="./img/about__img.jpg" alt="">
+                    <img src="./img/about__img.gif" alt="">
                 </div>
             </div>
         </div>
@@ -140,18 +142,18 @@
                     </div>
                     <div class="characteristic__item">
                         <button class="characteristic__item-btn"></button>
-                        <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
-                        <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
-                            раза превышает показатели Mavic Pro</p>
+                        <h5 class="characteristic__item-title">Dlog-M 10 бит</h5>
+                        <p class="characteristic__item-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
                         <div class="characteristic__item-arrow">
                             <img src="./img/characteristic__arrow-1.png" alt="">
                         </div>
                     </div>
                     <div class="characteristic__item">
                         <button class="characteristic__item-btn"></button>
-                        <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
-                        <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
-                            раза превышает показатели Mavic Pro</p>
+                        <h5 class="characteristic__item-title">Камера Hasselblad</h5>
+                        <p class="characteristic__item-text">Камера Hasselblad L1D-20С 
+                            известны эргономичным дизайном 
+                            и превосходным качеством изображений.</p>
                         <div class="characteristic__item-arrow">
                             <img src="./img/characteristic__arrow-3.png" alt="">
                         </div>
@@ -185,7 +187,7 @@
                             кинематографических целей.</p>
                     </div>
                     <div class="info__content-img info__content-img2">
-                        <img src="./img/info__img-1.jpg" alt="">
+                        <img src="./img/info__img-2.jpg" alt="">
                     </div>
                     <img src="./img/pattern.png" alt="" class="info__content-pattern">
                 </div>
@@ -206,24 +208,24 @@
                     <img src="./img/pattern.png" alt="" class="overview__content-pattern">
                 </div>
                 <div class="overview__img">
-                    <img src="./img/info__img-1.jpg" alt="">
+                    <img src="./img/overview__img.jpg" alt="">
                 </div>
             </div>
         </div>
     </section><!-- overview end -->
 
+
     <!-- faq
     ======================================================= -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <div class="faq__inner">
                 <h3 class="faq__title">Часто задаваемые вопросы</h3>
 
                 <ul class="accordion">
-
                     <li class="accordion__item accordion__item--active">
                         <div class="accordion__item-header">
-                            <div class="accordion__item-title">Какие формы оплаты вы принимаете?</div>
+                            <div class="accordion__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
                             <div class="accordion__item-btn">
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -234,15 +236,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion__item-answer" style="display: block;"><span>Ответ.</span> При бронировании
-                            вы можете оплатить
-                            дебетовую
-                            или кредитную карту VISA, дебетовую или кредитную карту MasterCard, карту Maestro, Visa
-                            Electron или American Express.</div>
+                        <div class="accordion__item-answer" style="display: block;">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс)..</div>
                     </li>
                     <li class="accordion__item">
                         <div class="accordion__item-header">
-                            <div class="accordion__item-title">Как приобрести подарочный сертификат?</div>
+                            <div class="accordion__item-title">Какая максимальная дальность полета Mavic 2?</div>
                             <div class="accordion__item-btn">
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -253,14 +251,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion__item-answer"><span>Ответ. </span>Купите подарочный сертификат, связавшись
-                            с нами по телефону. Затем ваш подарочный сертификат будет отправлен выбранному получателю по
-                            электронной почте для печати. Подарочные сертификаты, действительны в течение 12 месяцев с
-                            даты покупки и могут использоваться для бронирования любых мероприятий на веб-сайте</div>
+                        <div class="accordion__item-answer">18 км в экстремальных условиях тестирования при безветренной скорости 50,4 км / ч при разряде батареи 0%. Тем не менее, убедитесь, что во время полетов достаточно батареи для безопасного возвращения.</div>
                     </li>
                     <li class="accordion__item">
                         <div class="accordion__item-header">
-                            <div class="accordion__item-title">Какие услуги доступны мне до поездки?</div>
+                            <div class="accordion__item-title">Какое фокусное расстояние у Mavic 2 Pro?</div>
                             <div class="accordion__item-btn">
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -271,17 +266,11 @@
                             </div>
                         </div>
 
-                        <div class="accordion__item-answer"><span>Ответ. </span>Глобальные услуги по оказанию помощи
-                            в поездках
-                            доступны круглосуточно и без выходных до и во время поездки, чтобы помочь с различными
-                            потребностями в поездке, такими как: консультации перед поездкой, услуги перевода,
-                            медицинские и юридические направления, культурная информация, услуги консьержа, услуги
-                            по
-                            разрешению кражи личных данных и более.</div>
+                        <div class="accordion__item-answer">Камера Mavic 2 Pro с оптическим зумом 24–48 мм поддерживает съемку видео 1080p с 4-кратным зумом без потерь.</div>
                     </li>
                     <li class="accordion__item">
                         <div class="accordion__item-header">
-                            <div class="accordion__item-title">Как мне отменить бронирование?</div>
+                            <div class="accordion__item-title">Водонепроницаемый ли Mavic 2?</div>
                             <div class="accordion__item-btn">
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -292,11 +281,8 @@
                             </div>
                         </div>
 
-                        <div class="accordion__item-answer"><span>Ответ. </span>Чтобы отменить бронирование, свяжитесь с
-                            isango! напрямую по электронной почте или телефону, чтобы мы могли вам помочь. Плата за
-                            отмену будет применяться в соответствии с политикой мероприятия.</div>
+                        <div class="accordion__item-answer">Нет.</div>
                     </li>
-
                 </ul>
 
             </div>
@@ -319,13 +305,10 @@
 
                             <img src="./img/logo.png" alt="" class="contact__info-logo">
 
-                            <p class="contact__info-text">Наша миссия - «дать возможность каждому испытать
-                                уникальность
-                                мира
-                                вместе с нами».</p>
+                            <p class="contact__info-text">Нашей мечтой всегда было создать дрон, в котором сходятся инженерия, технологии и потребности аэрофотосъемки.</p>
 
                             <div class="contact__info-connection">
-                                <div class="contact__info-email">info@route7company.com</div>
+                                <div class="contact__info-email">info@dji-company.com</div>
                                 <div class="contact__info-phone">+7 777 666 5544</div>
                             </div>
 
@@ -431,29 +414,29 @@
 
                     <ul class="footer__list">
                         <li class="menu__list-item">
-                            <a class="link" href="#">Направления</a>
+                            <a class="link" href="#first-screen">Главная</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="link" href="#">Цены</a>
+                            <a class="link" href="#about">О продукте</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="link" href="#">Галерея</a>
+                            <a class="link" href="#benefits">Преимущества</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="link" href="#">FAQ</a>
+                            <a class="link" href="#characteristic">Характеристики</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="link" href="#">Блог</a>
+                            <a class="link" href="#faq">FAQ</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="link" href="#">Контакты</a>
+                            <a class="link" href="#contact">Контакты</a>
                         </li>
                     </ul>
 
                 </div>
             </div>
 
-            <small class="footer__copy">Copyright © 2021 Все права защищены. Шаблон создан KRASH.</small>
+            <small class="footer__copy">Создатель шаблона <b>Dmitriy Bozhko</b></small>
 
         </div>
     </footer><!-- Footer End -->

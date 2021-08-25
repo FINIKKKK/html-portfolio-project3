@@ -1,8 +1,21 @@
+//Min-Width: 1400px ================================
+@media (min-width: 1400px) {
+    .characteristic__inner {
+        padding: 340px 0;
+    }
+    .characteristic__item:nth-child(1) {
+        top: 31%;
+    }
+    .characteristic__item:nth-child(3) {
+        bottom: 32%;
+        .characteristic__item-arrow {
+            bottom: -10%;
+        }        
+    }
+}
+
 //Max-Width: 1200px ================================
 @media (max-width: 1200px) {
-    .top {
-        display: none;
-    }
     .info__welcome-title {
         font-weight: 700;
         font-size: 35px;
@@ -32,6 +45,21 @@
 
 //Max-Width: 1100px ================================
 @media (max-width: 1100px) {
+    .top-leaves {
+        display: none;
+    }
+    .top-mavic {
+        left: 0;
+        top: 20%;
+        height: 60%;
+        z-index: 10;
+    }
+    .top__title {
+        width: 65%;
+        font-size: 170px;
+        line-height: 170px;
+        letter-spacing: -15px;
+    }
     .characteristic__item-title {
         font-size: 16px;
         line-height: 18px;
@@ -177,6 +205,15 @@
 
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
+    .top-mavic {
+        top: 30%;
+        height: 50%;
+    }
+    .top__title {
+        width: 75%;
+        font-size: 146px;
+        line-height: 152px;
+    }
     .characteristic__item-arrow img {
         width: 70%;
         height: 70%;
@@ -409,7 +446,7 @@
     .characteristic__item-btn {
         display: none;
     }
-    
+
     .info__content-pattern {
         width: 1200px;
         left: 60%;
@@ -454,6 +491,12 @@
 
 //Max-Width: 600px ================================
 @media (max-width: 600px) {
+    .top__title {
+        width: 100%;
+        font-size: 128px;
+        line-height: 141px;
+        padding: 0 25px;
+    }
     .characteristic__img {
         width: 100%;
     }
@@ -637,6 +680,12 @@
 
 //Max-Width: 450px ================================
 @media (max-width: 450px) {
+    .top__title {
+        font-size: 112px;
+        line-height: 126px;
+        padding: 0 15px;
+        letter-spacing: -5px;
+    }
     .menu__list .menu__list-item {
         font-size: 28px;
         line-height: 45px;
@@ -675,6 +724,10 @@
 
 //Max-Width: 400px ================================
 @media (max-width: 400px) {
+    .top__title {
+        font-size: 95px;
+        line-height: 110px;
+    }
     .info__inner::before {
         width: 100%;
     }
