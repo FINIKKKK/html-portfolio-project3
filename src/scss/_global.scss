@@ -5,6 +5,10 @@ $gray: #d8d8d8;
 // ------- Global-Tags --------
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
+    &.hidden {
+        overflow-y: hidden;
+    }
 }
 *,
 *::before,
@@ -12,47 +16,52 @@ html {
     box-sizing: inherit;
 }
 body {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 320px;
     font-family: $font;
     font-weight: 400;
     font-size: 18px;
-    line-height: 25px;
-    color: #fff;
-    min-width: 320px;
-    overflow-x: hidden;
-    position: relative;
-    background-color: #000;
+    line-height: 23px;
+    color: $gray;
 }
 a {
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: $gray;
 }
 button {
-    border: none;
     outline: none;
-    cursor: pointer;
-    background-color: transparent;
+    border: none;
     padding: 0;
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 input {
-    background-color: #fff;
-    border: none;
     outline: none;
+    border: none;
+    font-family: inherit;
+    background-color: transparent;
 }
 textarea {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    background-color: transparent;
     resize: none;
 }
+section {
+    position: relative;
+}
 
-// ######################################
 // ----------- Global-Class -------------
-// ######################################
-
-// --------- Container ----------
 .container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .btn {
     background-color: #fff;
     font-weight: bold;
@@ -67,6 +76,7 @@ textarea {
         opacity: 0.4;
     }
 }
+
 .input {
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
@@ -77,6 +87,7 @@ textarea {
         color: #fff;
     }
 }
+
 .soclist {
     display: flex;
     align-items: center;
@@ -97,10 +108,12 @@ textarea {
         opacity: 0.4;
     }
 }
+
 .title-border {
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 1px #fff;
 }
+
 .wrapper {
     position: relative;
     &::before {
@@ -114,6 +127,13 @@ textarea {
     }
 }
 
+html[lang="ru"] [lang="en"] {
+    display: none;
+}
+html[lang="en"] [lang="ru"] {
+    display: none;
+}
+
 // --------- ScrollBar ----------
 ::-webkit-scrollbar {
     width: 5px;
@@ -123,4 +143,9 @@ textarea {
 }
 ::-webkit-scrollbar-track {
     background-color: #1c1c1c;
+}
+
+// --------- Select-Text ----------
+::selection {
+    background: rgba($gray, 0.65);
 }

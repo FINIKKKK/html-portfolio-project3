@@ -1,24 +1,18 @@
-// ------ Fonts -------
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-        font-weight: #{$weight};
-        font-style: #{$style};
-    }
-}
-@import "fonts"; 
+// --------- Fonts ----------
+@import "./_fonts.scss";
 
 
-// ------ Styles -------
-@import "reset"; //--Reset styles
-@import "global"; //--Vars & Global properties
-@import "main"; //--Main properties
+// --------- Main ----------
+@import "./_reset.scss";
+@import "./_global.scss";
+@import "./main.scss";
 
 
 // ---- Plugins ----
+@import "./plugins/animate.scss";
+
+
 
 
 // ---- Media-Mobile ----
-@import "media";
+@import "./media.scss";

@@ -34,8 +34,25 @@ $(function () {
 
 
 
+// --- Анимация при скролле(WOW)
+wow = new WOW(
+    {
+        boxClass: 'wow',
+        animateClass: 'animate__animated',
+        offset: 100,
+        duraction: 1,
+        mobile: true,
+        live: true,
+    }
+)
+wow.init();
 
 
+
+// Перевод страницы в зависимости от атрибута lang
+var tran = new Translater({
+    lang: `${$("html").attr("lang")}`
+});
 
 
 
