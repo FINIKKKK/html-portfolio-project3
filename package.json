@@ -6,7 +6,9 @@
   "type": "module",
   "dependencies": {
     "jquery": "^3.6.0",
-    "jquery.marquee": "^1.6.0"
+    "jquery.marquee": "^1.6.0",
+    "locomotive-scroll": "^4.1.4",
+    "particlesjs": "^2.2.3"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",

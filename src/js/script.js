@@ -22,8 +22,12 @@
 
 
 // Plugins ----------------
+@@include('./plugins/three.min.js');
+@@include('./plugins/gsap.min.js');
+
 @@include('../../node_modules/translater.js/dist/translater.min.js');
 @@include('../../node_modules/wowjs/dist/wow.min.js');
+@@include('./plugins/locomotive-scroll.min.js');
 
 
 // Main-JS -----------------
