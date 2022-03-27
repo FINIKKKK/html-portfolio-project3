@@ -28,6 +28,7 @@
 @@include('../../node_modules/translater.js/dist/translater.min.js');
 @@include('../../node_modules/wowjs/dist/wow.min.js');
 @@include('./plugins/locomotive-scroll.min.js');
+@@include('../../node_modules/particlesjs/dist/particles.min.js');
 
 
 // Main-JS -----------------
