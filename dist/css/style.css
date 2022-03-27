@@ -493,6 +493,10 @@ textarea {
   padding: 0.2em 0;
 }
 
+hr {
+  margin: 0;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -747,17 +751,11 @@ html[lang="en"] [lang="ru"] {
 ::-webkit-scrollbar {
   width: 5px;
   position: absolute;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  opacity: 1;
 }
 
 ::-webkit-scrollbar-track {
@@ -1294,8 +1292,11 @@ html[lang="en"] [lang="ru"] {
   background-color: #fff;
   left: 0;
   top: 0;
-  -webkit-animation: about__line 1.7s ease infinite;
-          animation: about__line 1.7s ease infinite;
+}
+
+.about .about__content-line.is-inview {
+  -webkit-animation: about__line 1.7s ease both;
+          animation: about__line 1.7s ease both;
 }
 
 @-webkit-keyframes about__line {
@@ -1331,8 +1332,8 @@ html[lang="en"] [lang="ru"] {
 }
 
 .about__img {
-  width: 480px;
-  height: 500px;
+  width: 460px;
+  height: 370px;
 }
 
 .about__img img {
@@ -1358,7 +1359,28 @@ html[lang="en"] [lang="ru"] {
 
 .benefits__item {
   text-align: center;
+  position: relative;
   width: 315px;
+}
+
+.benefits__item.is-inview {
+  -webkit-animation: fadeInUp 1.7s ease both;
+          animation: fadeInUp 1.7s ease both;
+}
+
+.benefits__item:nth-child(1).is-inview {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.benefits__item:nth-child(2).is-inview {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.benefits__item:nth-child(3).is-inview {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .benefits__item-icon {
@@ -1372,17 +1394,15 @@ html[lang="en"] [lang="ru"] {
 }
 
 .benefits__item-title {
+  text-align: center;
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
-  width: 245px;
-  margin: 0 auto;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .benefits__item-text {
@@ -7736,6 +7756,11 @@ h6 {
   position: relative;
 }
 
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+
 .c-scrollbar {
   width: 10px;
   position: absolute;
@@ -7753,12 +7778,19 @@ h6 {
   -o-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+
+.c-scrollbar:hover {
+  opacity: 1;
 }
 
 .c-scrollbar_thumb {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   width: 4px;
@@ -7766,10 +7798,12 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 .c-scrollbar:hover .c-scrollbar_thumb {
-  opacity: 1;
   cursor: -webkit-grab;
   cursor: grab;
 }

@@ -395,6 +395,10 @@ h6 {
 .has-scroll-smooth .o-scroll {
   position: relative;
 }
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
 .c-scrollbar {
   width: 10px;
   position: absolute;
@@ -404,10 +408,13 @@ h6 {
   transform-origin: center right;
   transform: scaleX(1);
   transition: transform 0.2s linear;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
 }
 .c-scrollbar_thumb {
-  // opacity: 0;
-  transition: 0.3s;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   width: 4px;
@@ -415,10 +422,10 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+  transition: width 0.3s;
 }
 .c-scrollbar:hover {
   .c-scrollbar_thumb {
-    opacity: 1;
     cursor: grab;
   }
 }

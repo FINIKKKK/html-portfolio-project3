@@ -216,25 +216,6 @@ $(document).ready(function () {
 });
 
 
-// jQuery(document).ready(function ($) {
-
-//     $("body").flurry({
-//         character: ".",
-//         color: "white",
-//         frequency: 360,
-//         speed: 150000,
-//         small: 8,
-//         large: 48,
-//         wind: 60,
-//         windVariance: 20,
-//         rotation: 0,
-//         rotationVariance: 90,
-//     });
-
-// });
-
-
-
 particlesJS("particles-js", {
     "particles": {
         "number": {
