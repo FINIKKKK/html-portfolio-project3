@@ -348,3 +348,126 @@ html[lang="en"] [lang="ru"] {
     width: 100%;
     height: 100%;
 }
+
+html.has-scroll-smooth {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.fadeUp {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.7s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &.is-inview {
+        opacity: 1;
+        transform: none;
+    }
+}
+.scaleImg {
+    overflow: hidden;
+    img {
+        opacity: 0;
+        transform: scale(1.4);
+        transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    &.is-inview {
+        img {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.fadeAfter {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    span {
+        opacity: 0;
+    }
+    &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 0%;
+        height: 110%;
+        background: #000;
+    }
+    &.is-inview {
+        span {
+            animation: appear-text 0.0001s linear forwards;
+            animation-delay: 0.7s;
+        }
+        &::after {
+            animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation-delay: 0.3s;
+        }
+    }
+}
+@keyframes rev-block {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 0;
+        width: 110%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
+@keyframes appear-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadeAfterImg {
+    position: relative;
+    overflow: hidden;
+    img {
+        opacity: 0;
+    }
+    &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        background: #000;
+    }
+    &.is-inview {
+        img {
+            animation: appear-text 0.0001s linear forwards;
+            animation-delay: 0.7s;
+        }
+        &::after {
+            animation: rev-block2 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation-delay: 0.3s;
+        }
+    }
+}
+@keyframes rev-block2 {
+    0% {
+        top: 0;
+        height: 0%;
+    }
+    50% {
+        top: 0;
+        height: 100%;
+    }
+    100% {
+        top: 100%;
+        height: 0%;
+    }
+}

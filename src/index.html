@@ -39,7 +39,7 @@
         <section class="about" id="about" data-scroll-section>
             <div class="container">
                 <div class="about__inner">
-                    <div class="about__content" data-scroll>
+                    <div class="about__content fadeUp" data-scroll data-scroll-offset="250">
 
                         <h2 class="about__content-title" data-scroll>
                             <span data-scroll data-scroll-speed="1">Что такое </span>
@@ -56,8 +56,8 @@
                         <img src="./img/pattern.png" width="550" height="550" loading="lazy" alt="pattern" class="about__content-pattern">
                     </div>
 
-                    <div class="about__img" data-scroll data-scroll-speed="-3">
-                        <img src="./img/about__img.png" width="460" height="370" loading="lazy" alt="mavic">
+                    <div class="about__img" data-scroll data-scroll-speed="-1.5" data-scroll-offset="300">
+                        <img src="./img/about__img.png" width="460" height="370" loading="lazy" alt="mavic" class="fadeUp">
                     </div>
                 </div>
             </div>
@@ -70,32 +70,32 @@
         <section class="benefits" id="benefits" data-scroll-section>
             <div class="container">
                 <div class="benefits__inner">
-                    <div class="benefits__item" data-scroll>
-                        <div class="benefits__item-icon">
+                    <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
+                        <div class="benefits__item-icon" data-scroll data-scroll-speed="2">
                             <svg width="20" height="20">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon1" />
                             </svg>
                         </div>
-                        <h4 class="benefits__item-title">Запас батареи</h4>
-                        <p class="benefits__item-text">Емкость аккумулятора Mavic 2 Pro увеличена, теперь запас летного хода на одной зарядке составляет 31 минуту</p>
+                        <h4 class="benefits__item-title" data-scroll data-scroll-speed="2">Запас батареи</h4>
+                        <p class="benefits__item-text" data-scroll data-scroll-speed="2.5">Емкость аккумулятора Mavic 2 Pro увеличена, теперь запас летного хода на одной зарядке составляет 31 минуту</p>
                     </div>
-                    <div class="benefits__item" data-scroll>
-                        <div class="benefits__item-icon">
+                    <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
+                        <div class="benefits__item-icon" data-scroll data-scroll-speed="4">
                             <svg width="20" height="20">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon2" />
                             </svg>
                         </div>
-                        <h4 class="benefits__item-title">Mavic в полете</h4>
-                        <p class="benefits__item-text">Пульт имеет настолько быстрый отклик, что многим приходится снижать его чувствительность – так скоро он реагирует на команды.</p>
+                        <h4 class="benefits__item-title" data-scroll data-scroll-speed="4">Mavic в полете</h4>
+                        <p class="benefits__item-text" data-scroll data-scroll-speed="4.5">Пульт имеет настолько быстрый отклик, что многим приходится снижать его чувствительность – так скоро он реагирует на команды.</p>
                     </div>
-                    <div class="benefits__item" data-scroll>
-                        <div class="benefits__item-icon">
+                    <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
+                        <div class="benefits__item-icon" data-scroll data-scroll-speed="2">
                             <svg width="20" height="20">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon3" />
                             </svg>
                         </div>
-                        <h4 class="benefits__item-title">Качество съемки</h4>
-                        <p class="benefits__item-text">Продвинутая камера Hasselblad с большой дюймовой матрицей, способной производить фото- и видеосъемку высокого качества.</p>
+                        <h4 class="benefits__item-title" data-scroll data-scroll-speed="2">Качество съемки</h4>
+                        <p class="benefits__item-text" data-scroll data-scroll-speed="2.5">Продвинутая камера Hasselblad с большой дюймовой матрицей, способной производить фото- и видеосъемку высокого качества.</p>
                     </div>
                 </div>
             </div>
@@ -105,38 +105,44 @@
 
         <!-- characteristic
         ======================================================= -->
-        <section class="characteristic" id="characteristic">
+        <section class="characteristic" id="characteristic" data-scroll-section>
             <div class="container">
-                <div class="characteristic__inner">
-                    <div class="characteristic__img">
-                        <img src="./img/characteristic__img.png" alt="">
+                <div class="characteristic__inner" data-scroll data-scroll-speed="-1">
+                    <div class="characteristic__img fadeUp" data-scroll data-scroll-speed="2" data-scroll-offset="300">
+                        <img src="./img/characteristic__img.png" width="780" height="340" loading="lazy" alt="mavic">
                     </div>
                     <div class="characteristic__items">
-                        <div class="characteristic__item characteristic__item--active">
+                        <div class="characteristic__item active" data-scroll data-scroll-offset="350">
                             <button class="characteristic__item-btn"></button>
-                            <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
-                            <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
-                                раза превышает показатели Mavic Pro</p>
+                            <div class="characteristic__item-content">
+                                <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
+                                <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
+                                    раза превышает показатели Mavic Pro</p>
+                            </div>
                             <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-1.png" alt="">
+                                <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow1">
                             </div>
                         </div>
-                        <div class="characteristic__item">
+                        <div class="characteristic__item" data-scroll data-scroll-offset="350">
                             <button class="characteristic__item-btn"></button>
-                            <h5 class="characteristic__item-title">Dlog-M 10 бит</h5>
-                            <p class="characteristic__item-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
+                            <div class="characteristic__item-content">
+                                <h5 class="characteristic__item-title">Dlog-M 10 бит</h5>
+                                <p class="characteristic__item-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
+                            </div>
                             <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-1.png" alt="">
+                                <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow2">
                             </div>
                         </div>
-                        <div class="characteristic__item">
+                        <div class="characteristic__item" data-scroll data-scroll-offset="350">
                             <button class="characteristic__item-btn"></button>
-                            <h5 class="characteristic__item-title">Камера Hasselblad</h5>
-                            <p class="characteristic__item-text">Камера Hasselblad L1D-20С
-                                известны эргономичным дизайном
-                                и превосходным качеством изображений.</p>
+                            <div class="characteristic__item-content">
+                                <h5 class="characteristic__item-title">Камера Hasselblad</h5>
+                                <p class="characteristic__item-text">Камера Hasselblad L1D-20С
+                                    известны эргономичным дизайном
+                                    и превосходным качеством изображений.</p>
+                            </div>
                             <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-3.png" alt="">
+                                <img src="./img/characteristic__arrow-3.png" width="350" height="70" loading="lazy" alt="arrow3">
                             </div>
                         </div>
                     </div>
@@ -147,31 +153,39 @@
 
 
         <!-- info
-    ======================================================= -->
-        <section class="info">
+        ======================================================= -->
+        <section class="info" data-scroll-section>
             <div class="container">
                 <div class="info__inner">
                     <div class="info__welcome">
-                        <h5 class="info__welcome-title">Лучшая беспилотная технология аэросъемки</h5>
-                        <p class="info__welcome-text">Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c.
-                            Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5,
-                            позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и
-                            потрясающими цветами.</p>
+                        <hr class="info__welcome-line" data-scroll data-scroll-speed="1.5">
+                        <div class="info__welcome-content" data-scroll data-scroll-speed="2">
+                            <h5 class="info__welcome-title fadeUp" data-scroll data-scroll-offset="450">Лучшая беспилотная технология аэросъемки</h5>
+                            <p class="info__welcome-text fadeUp" data-scroll data-scroll-offset="450">Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c.
+                                Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5,
+                                позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и
+                                потрясающими цветами.</p>
+                        </div>
                     </div>
+
                     <div class="info__content">
-                        <h2 class="info__content-title">Снимайте видео в <span class="title-border">4K</span></h2>
+                        <div class="info__content-title">
+                            <p class="fadeAfter" data-scroll data-scroll-speed="3" data-scroll-offset="350"><span>Снимайте</span></p>
+                            <p class="fadeAfter" data-scroll data-scroll-speed="3.5" data-scroll-offset="350"><span>видео в <b class="title-border">4K</b></span></p>
+                        </div>
+
                         <div class="info__content-flex">
-                            <div class="info__content-img info__content-img1">
-                                <img src="./img/info__img-1.jpg" alt="">
+                            <div class="info__content-img info__content-img1" data-scroll data-scroll-speed="1">
+                                <img src="./img/info__img-1.jpg" width="420" height="390" loading="lazy" alt="info__content-img1" class="fadeUp" data-scroll data-scroll-offset="450">
                             </div>
-                            <p class="info__content-text">Качество картинки теперь ничем не хуже изображений полученных при
-                                помощи зеркальных фотокамер, а видео 4K позволяет использовать дрон DJI Mavic 2 Pro для
-                                кинематографических целей.</p>
+                            <p class="info__content-text fadeAfter" data-scroll data-scroll-speed="3" data-scroll-offset="450"><span>Качество картинки теперь ничем не хуже изображений полученных при
+                                    помощи зеркальных фотокамер, а видео 4K позволяет использовать дрон DJI Mavic 2 Pro для
+                                    кинематографических целей.</span></p>
                         </div>
-                        <div class="info__content-img info__content-img2">
-                            <img src="./img/info__img-2.jpg" alt="">
+                        <div class="info__content-img info__content-img2" data-scroll data-scroll-speed="2">
+                            <img src="./img/info__img-2.jpg" width="420" height="390" loading="lazy" alt="info__content-img2" class="fadeUp" data-scroll data-scroll-offset="450">
                         </div>
-                        <img src="./img/pattern.png" alt="" class="info__content-pattern">
+                        <img src="./img/pattern.png" width="1521" height="1551" loading="lazy" alt="pattern" class="info__content-pattern">
                     </div>
                 </div>
             </div>
@@ -180,18 +194,20 @@
 
 
         <!-- overview
-    ======================================================= -->
-        <section class="overview">
-            <div class="container">
-                <div class="overview__inner">
-                    <div class="overview__content">
-                        <h5 class="overview__content-title">Дрон DJI Mavic 2 Pro</h5>
-                        <p class="overview__content-text">Полностью обновленная модель с камерой Hasselblad на борту,
-                            CMOS-матрицей размером 1″ и возможностью съемки в режиме Hyperlapse.</p>
-                        <img src="./img/pattern.png" alt="" class="overview__content-pattern">
-                    </div>
-                    <div class="overview__img">
-                        <img src="./img/overview__img.jpg" alt="">
+        ======================================================= -->
+        <section class="overview" data-scroll-section>
+            <div class="overview__wrapper" data-scroll data-scroll-offset="950">
+                <div class="container">
+                    <div class="overview__inner">
+                        <div class="overview__content">
+                            <h5 class="overview__content-title" data-scroll data-scroll-speed="-1"><span class="fadeUp" data-scroll data-scroll-offset="450">Дрон DJI Mavic 2 Pro</span></h5>
+                            <p class="overview__content-text" data-scroll data-scroll-speed="-1.5"><span class="fadeUp" data-scroll data-scroll-offset="450">Полностью обновленная модель с камерой Hasselblad на борту,
+                                    CMOS-матрицей размером 1″ и возможностью съемки в режиме Hyperlapse.</span></p>
+                            <img src="./img/pattern.png" width="720" height="720" loading="lazy" alt="pattern" class="overview__content-pattern" data-scroll data-scroll-speed="1">
+                        </div>
+                        <div class="overview__img fadeAfterImg" data-scroll data-scroll-offset="300" data-scroll-speed="1">
+                            <img src="./img/overview__img.jpg" width="485" height="485" loading="lazy" alt="overview__img">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,60 +216,44 @@
 
 
         <!-- faq
-    ======================================================= -->
-        <section class="faq" id="faq">
+        ======================================================= -->
+        <section class="faq" id="faq" data-scroll-section>
             <div class="container">
                 <div class="faq__inner">
-                    <h3 class="faq__title">Часто задаваемые вопросы</h3>
+                    <h3 class="faq__title fadeUp" data-scroll data-scroll-offset="400">Часто задаваемые вопросы</h3>
 
                     <ul class="accordion">
-                        <li class="accordion__item accordion__item--active">
+                        <li class="accordion__item active fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
-                                <div class="accordion__item-title">Чем Mavic 2 лучше Mavic Pro?</div>
-                                <div class="accordion__item-btn">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.41 0.590027L6 5.17003L10.59 0.590027L12 2.00003L6 8.00003L0 2.00003L1.41 0.590027Z" fill="white" />
-                                    </svg>
-                                </div>
+                                <h5 class="accordion__item-title">Чем Mavic 2 лучше Mavic Pro?</h5>
+                                <button class="accordion__item-btn"></button>
                             </div>
 
-                            <div class="accordion__item-answer" style="display: block;">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс)..</div>
+                            <p class="accordion__item-answer" style="display: block;">В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс)..</p>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
-                                <div class="accordion__item-title">Какая максимальная дальность полета Mavic 2?</div>
-                                <div class="accordion__item-btn">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.41 0.590027L6 5.17003L10.59 0.590027L12 2.00003L6 8.00003L0 2.00003L1.41 0.590027Z" fill="white" />
-                                    </svg>
-                                </div>
+                                <h5 class="accordion__item-title">Какая максимальная дальность полета Mavic 2?</h5>
+                                <button class="accordion__item-btn"></button>
                             </div>
 
-                            <div class="accordion__item-answer">18 км в экстремальных условиях тестирования при безветренной скорости 50,4 км / ч при разряде батареи 0%. Тем не менее, убедитесь, что во время полетов достаточно батареи для безопасного возвращения.</div>
+                            <p class="accordion__item-answer">18 км в экстремальных условиях тестирования при безветренной скорости 50,4 км / ч при разряде батареи 0%. Тем не менее, убедитесь, что во время полетов достаточно батареи для безопасного возвращения.</p>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
-                                <div class="accordion__item-title">Какое фокусное расстояние у Mavic 2 Pro?</div>
-                                <div class="accordion__item-btn">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.41 0.590027L6 5.17003L10.59 0.590027L12 2.00003L6 8.00003L0 2.00003L1.41 0.590027Z" fill="white" />
-                                    </svg>
-                                </div>
+                                <h5 class="accordion__item-title">Какое фокусное расстояние у Mavic 2 Pro?</h5>
+                                <button class="accordion__item-btn"></button>
                             </div>
 
-                            <div class="accordion__item-answer">Камера Mavic 2 Pro с оптическим зумом 24–48 мм поддерживает съемку видео 1080p с 4-кратным зумом без потерь.</div>
+                            <p class="accordion__item-answer">Камера Mavic 2 Pro с оптическим зумом 24–48 мм поддерживает съемку видео 1080p с 4-кратным зумом без потерь.</p>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
-                                <div class="accordion__item-title">Водонепроницаемый ли Mavic 2?</div>
-                                <div class="accordion__item-btn">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.41 0.590027L6 5.17003L10.59 0.590027L12 2.00003L6 8.00003L0 2.00003L1.41 0.590027Z" fill="white" />
-                                    </svg>
-                                </div>
+                                <h5 class="accordion__item-title">Водонепроницаемый ли Mavic 2?</h5>
+                                <button class="accordion__item-btn"></button>
                             </div>
 
-                            <div class="accordion__item-answer">Нет.</div>
+                            <p class="accordion__item-answer">Нет.</p>
                         </li>
                     </ul>
 

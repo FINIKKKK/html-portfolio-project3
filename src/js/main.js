@@ -143,15 +143,15 @@ var tran = new Translater({
 
 
 
-setInterval(function () {
-    var active = $('.characteristic__item.active');
-    active.removeClass('active');
-    active.nextOrFirst().addClass('active');
-}, 5000);
-$.fn.nextOrFirst = function (selector) {
-    var next = this.next(selector);
-    return (next.length) ? next : this.prevAll(selector).last();
-};
+// setInterval(function () {
+//     var active = $('.characteristic__item.active');
+//     active.removeClass('active');
+//     active.nextOrFirst().addClass('active');
+// }, 7000);
+// $.fn.nextOrFirst = function (selector) {
+//     var next = this.next(selector);
+//     return (next.length) ? next : this.prevAll(selector).last();
+// };
 
 
 
