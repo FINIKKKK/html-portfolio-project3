@@ -6,33 +6,68 @@
 "title-en": "Project-3"
 })
 
-<body>
+<body data-scroll-container>
 
-    <div class="o-scroll" id="js-scroll">
-
-        <!-- <div id="particles-js"></div> -->
-
-        @@include('./blocks/main/_header.html')
-
-
-        <!-- top
-        ======================================================= -->
-        <section class="top" id="first-screen" data-scroll-section>
-            <div class="top__inner">
-                <h1 class="top__title">MAVIC 2 PRO</h1>
-                <div class="top-bg">
-                    <img src="./img/bg--top.jpg" alt="">
-                </div>
-                <div class="top-mavic">
-                    <img src="./img/mavic.png" alt="">
-                </div>
-                <div class="top-leaves">
-                    <img src="./img/leaves.png" alt="">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__block">
+            <div class='container-spinner'>
+                <div class='spinner'>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
+                    <div class='item'></div>
                 </div>
             </div>
-        </section>
-        <!-- top end -->
+            <svg>
+                <defs>
+                    <filter id='goo'>
+                        <feGaussianBlur in='SourceGraphic' stdDeviation='8' result='blur' />
+                        <feColorMatrix in='blur' mode='matrix' values='
+                                                                   1 0 0 0 0 
+                                                                   0 1 0 0 0
+                                                                   0 0 1 0 0
+                                                                   0 0 0 50 -8' result='goo' />
+                        <feBlend in='SourceGraphic' in2='goo' />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
 
+
+    <!-- <div id="particles-js" data-scroll-section></div> -->
+
+
+    @@include('./blocks/main/_header.html')
+
+
+    <!-- top
+     ======================================================= -->
+    <section class="top" id="first-screen" data-scroll-section>
+        <div class="top__inner">
+            <h1 class="top__title">MAVIC 2 PRO</h1>
+            <div class="top-bg">
+                <img src="./img/bg--top.jpg" alt="">
+            </div>
+            <div class="top-mavic">
+                <img src="./img/mavic.png" alt="">
+            </div>
+            <div class="top-leaves">
+                <img src="./img/leaves.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- top end -->
+
+
+    <main class="main">
+
+        <canvas id="particles" class="particles" data-scroll-section></canvas>
 
         <!-- about
         ======================================================= -->
@@ -57,7 +92,7 @@
                     </div>
 
                     <div class="about__img" data-scroll data-scroll-speed="-1.5" data-scroll-offset="300">
-                        <img src="./img/about__img.png" width="460" height="370" loading="lazy" alt="mavic" class="fadeUp">
+                        <img src="./img/about__img.png" width="560" height="340" loading="lazy" alt="mavic" class="fadeUp">
                     </div>
                 </div>
             </div>
@@ -105,50 +140,50 @@
 
         <!-- characteristic
         ======================================================= -->
-        <section class="characteristic" id="characteristic" data-scroll-section>
-            <div class="container">
-                <div class="characteristic__inner" data-scroll data-scroll-speed="-1.5">
-                    <div class="characteristic__img fadeUp" data-scroll data-scroll-offset="300">
-                        <img src="./img/characteristic__img.png" width="780" height="340" loading="lazy" alt="mavic">
+        <!-- <section class="characteristic" id="characteristic" data-scroll-section>
+        <div class="container">
+            <div class="characteristic__inner" data-scroll data-scroll-speed="-1.5">
+                <div class="characteristic__img fadeUp" data-scroll data-scroll-offset="300">
+                    <img src="./img/characteristic__img.png" width="780" height="340" loading="lazy" alt="mavic">
+                </div>
+                <div class="characteristic__items">
+                    <div class="characteristic__item active" data-scroll data-scroll-offset="350">
+                        <button class="characteristic__item-btn"></button>
+                        <div class="characteristic__item-content">
+                            <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
+                            <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
+                                раза превышает показатели Mavic Pro</p>
+                        </div>
+                        <div class="characteristic__item-arrow">
+                            <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow1">
+                        </div>
                     </div>
-                    <div class="characteristic__items">
-                        <div class="characteristic__item active" data-scroll data-scroll-offset="350">
-                            <button class="characteristic__item-btn"></button>
-                            <div class="characteristic__item-content">
-                                <h5 class="characteristic__item-title">Матрица CMOS 1</h5>
-                                <p class="characteristic__item-text">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре
-                                    раза превышает показатели Mavic Pro</p>
-                            </div>
-                            <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow1">
-                            </div>
+                    <div class="characteristic__item" data-scroll data-scroll-offset="350">
+                        <button class="characteristic__item-btn"></button>
+                        <div class="characteristic__item-content">
+                            <h5 class="characteristic__item-title">Dlog-M 10 бит</h5>
+                            <p class="characteristic__item-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
                         </div>
-                        <div class="characteristic__item" data-scroll data-scroll-offset="350">
-                            <button class="characteristic__item-btn"></button>
-                            <div class="characteristic__item-content">
-                                <h5 class="characteristic__item-title">Dlog-M 10 бит</h5>
-                                <p class="characteristic__item-text">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
-                            </div>
-                            <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow2">
-                            </div>
+                        <div class="characteristic__item-arrow">
+                            <img src="./img/characteristic__arrow-1.png" width="350" height="70" loading="lazy" alt="arrow2">
                         </div>
-                        <div class="characteristic__item" data-scroll data-scroll-offset="350">
-                            <button class="characteristic__item-btn"></button>
-                            <div class="characteristic__item-content">
-                                <h5 class="characteristic__item-title">Камера Hasselblad</h5>
-                                <p class="characteristic__item-text">Камера Hasselblad L1D-20С
-                                    известны эргономичным дизайном
-                                    и превосходным качеством изображений.</p>
-                            </div>
-                            <div class="characteristic__item-arrow">
-                                <img src="./img/characteristic__arrow-3.png" width="350" height="70" loading="lazy" alt="arrow3">
-                            </div>
+                    </div>
+                    <div class="characteristic__item" data-scroll data-scroll-offset="350">
+                        <button class="characteristic__item-btn"></button>
+                        <div class="characteristic__item-content">
+                            <h5 class="characteristic__item-title">Камера Hasselblad</h5>
+                            <p class="characteristic__item-text">Камера Hasselblad L1D-20С
+                                известны эргономичным дизайном
+                                и превосходным качеством изображений.</p>
+                        </div>
+                        <div class="characteristic__item-arrow">
+                            <img src="./img/characteristic__arrow-3.png" width="350" height="70" loading="lazy" alt="arrow3">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section> -->
         <!-- characteristic end -->
 
 
@@ -215,6 +250,39 @@
         <!-- overview end -->
 
 
+        <!-- photography
+        ======================================================= -->
+        <section class="photography" data-scroll-section>
+            <div class="container">
+                <div class="photography__inner">
+
+                    <div class="photography__content">
+                        <h3 class="photography__content-title" data-scroll data-scroll-speed="-1">Photography is the att, science,
+                            and practice of creating</h3>
+                        <p class="photography__content-text" data-scroll data-scroll-speed="-1.5">With the rise of digital photography
+                            and rapid developments in devices,
+                            which have become cheaper and
+                            more powerful, interest in
+                            photography has exploded.</p>
+                    </div>
+
+                    <div class="photography__img1" data-scroll data-scroll-speed="1">
+                        <img src="./img/phography__img1.jpg" width="" height="" loading="lazy" alt="">
+                    </div>
+
+                    <div class="photography__content2">
+                        <div class="photography__img2" data-scroll data-scroll-speed="-1">
+                            <img src="./img/info__img-1.jpg" width="" height="" loading="lazy" alt="">
+                        </div>
+                        <h2 class="photography__title">Thank you so much</h2>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- photography end -->
+
+
         <!-- faq
         ======================================================= -->
         <section class="faq" id="faq" data-scroll-section>
@@ -262,9 +330,12 @@
         </section>
         <!-- faq end -->
 
+    </main>
 
-        @@include('./blocks/main/_footer.html')
-    </div>
+
+
+    @@include('./blocks/main/_footer.html')
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
