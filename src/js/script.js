@@ -22,7 +22,7 @@
 
 
 // Plugins ----------------
-
+@@include('../../node_modules/translater.js/dist/translater.min.js');
 @@include('./plugins/three.min.js');
 @@include('../../node_modules/locomotive-scroll/dist/locomotive-scroll.min.js');
 

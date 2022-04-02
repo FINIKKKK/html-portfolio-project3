@@ -36,17 +36,17 @@ $(function () {
 
 
 // --- Анимация при скролле(WOW)
-wow = new WOW(
-    {
-        boxClass: 'wow',
-        animateClass: 'animate__animated',
-        offset: 100,
-        duraction: 1,
-        mobile: true,
-        live: true,
-    }
-)
-wow.init();
+// wow = new WOW(
+//     {
+//         boxClass: 'wow',
+//         animateClass: 'animate__animated',
+//         offset: 100,
+//         duraction: 1,
+//         mobile: true,
+//         live: true,
+//     }
+// )
+// wow.init();
 
 
 
@@ -477,5 +477,3 @@ $(document).ready(function () {
 
 // // Call render
 // render();
-
-
