@@ -110,6 +110,9 @@
 
 //Max-Width: 1000px ================================
 @media (max-width: 1000px) {
+    .header .menu__list-item:not(:last-child) {
+        margin-right: 30px;
+    }
     .characteristic__item:nth-child(1) {
         right: -7px;
     }
@@ -216,6 +219,101 @@
 
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
+    .languages {
+        position: absolute;
+        right: 70px;
+    }
+    .logo {
+        position: relative;
+        z-index: 120;
+    }
+    .header__dots {
+        display: none;
+    }
+    .menu__list-wrapper {  
+        position: fixed;
+        z-index: 1;
+        &:before,
+        &:after {
+            content: "";
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(#eaeaea, 0.2);
+            z-index: -1;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+            transform: translateX(0%) translateY(-100%);
+        }
+        &:after {
+            background: rgba(#1c1c1c, 1);
+            transition-delay: 0s;
+        }
+        &:before {
+            transition-delay: 0.1s;
+        }
+        .menu__list {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+        .menu__list-item {
+            position: relative;
+            font-size: 30px;
+            line-height: 52px;
+            text-transform: capitalize;
+            display: inline-block;
+            transition-delay: 0.8s;
+            opacity: 0;
+            transform: translate(0%, 100%);
+            transition: opacity 0.2s ease, transform 0.3s ease;
+        }
+    }
+    .menu__list-item:not(:last-child) {
+        margin-right: 0 !important;
+        margin-bottom: 35px;
+    }
+    .header.mobile {
+        $menu--items--count: 5;
+        .menu__list-wrapper {
+            visibility: visible;
+            &:before,
+            &:after {
+                transform: translateX(0%) translateY(0%);
+            }
+            &:after {
+                transition-delay: 0.1s;
+            }
+            &:before {
+                transition-delay: 0s;
+            }
+            .menu__list-item {
+                opacity: 1;
+                transform: translateX(0%);
+                transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+                @for $i from 0 through $menu--items--count {
+                    &:nth-child(#{$i}) {
+                        transition-delay: 0.8 * $i / 8 + 0.5 + s;
+                    }
+                }
+            }
+        }
+    }
+    .hamburger {
+        display: flex !important;
+        z-index: 100;
+    }
     .top-mavic {
         top: 30%;
         height: 50%;
@@ -259,48 +357,6 @@
         .characteristic__item-btn {
             position: absolute;
             left: -31%;
-        }
-    }
-    .hamburger {
-        display: flex !important;
-    }
-    .menu__list-wrapper {
-        transition: opacity 0.2s ease-out;
-        opacity: 0;
-    }
-    .menu__list {
-        width: 100%;
-        z-index: 120;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        .menu__list-item {
-            width: 100%;
-            display: none;
-            font-size: 40px;
-            line-height: 65px;
-            font-weight: 700;
-            padding: 0;
-            padding: 10px 0px;
-            transition: background-color 0.5s;
-            &::before {
-                display: none;
-            }
-            a {
-                transition: color 0.5s;
-                color: #fefefe;
-            }
-        }
-        .menu__list-item:hover {
-            a {
-                color: rgba(#000, 0);
-                -webkit-text-stroke: 0.5px #fefefe;
-            }
         }
     }
 

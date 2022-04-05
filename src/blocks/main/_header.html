@@ -1,31 +1,68 @@
 <!-- header
-======================================================= -->
-<header class="header wow animate__animated animate__fadeInDown" data-scroll-section>
+  ======================================================= -->
+<header class="header" data-scroll-section>
   <div class="container">
     <nav class="menu">
 
       <a href="#first-screen" class="logo">
-        <img src="./img/logo.png" width="70" height="40" loading="lazy" alt="logo">
+        <img src="./img/logo.png" width="50" height="30" loading="lazy" alt="logo">
       </a>
-
       <div class="menu__list-wrapper">
         <ul class="menu__list">
           <li class="menu__list-item">
-            <a href="#about">О продукте</a>
+            <a href="#about" data-scroll-to>
+              О продукте
+              <!--{en}About product-->
+            </a>
           </li>
           <li class="menu__list-item">
-            <a href="#benefits">Преимущества</a>
+            <a href="#benefits" data-scroll-to>
+              Преимущества
+              <!--{en}Advantages-->
+            </a>
           </li>
           <li class="menu__list-item">
-            <a href="#characteristic">Характеристики</a>
+            <a href="#about" data-scroll-to>
+              Характеристики
+              <!--{en}Characteristics-->
+            </a>
           </li>
           <li class="menu__list-item">
-            <a href="#contact">Контакты</a>
+            <a href="#characteristic" data-scroll-to>
+              FAQ
+              <!--{en}FAQ-->
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#contact" data-scroll-to>
+              Контакты
+              <!--{en}Contacts-->
+            </a>
           </li>
         </ul>
       </div>
 
+      <div class="languages">
+        <div class="languages__icon">
+          <svg width="20" height="20">
+            <use xlink:href="./img/icons/icons.svg#globe" />
+          </svg>
+        </div>
+        <ul class="languages__list">
+          <li class="languages__list-item languages__item-eng active">eng</li>
+          <li class="languages__list-item languages__item-rus">rus</li>
+        </ul>
+      </div>
+
+      <div class="header__dots">
+        <svg width="20" height="20">
+          <use xlink:href="./img/icons/icons.svg#dots" />
+        </svg>
+      </div>
+
       <button class="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>

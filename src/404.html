@@ -7,7 +7,7 @@
 })
 
 <body class="error404-page">
-    
+
 
     <!-- error404
     ======================================================= -->
@@ -31,12 +31,16 @@
                 </div>
 
                 <div class="error404__content">
-                    <h1 class="error404__title animate__animated animate__fadeInUp">404</h1>
-                    <p class="error404__text animate__animated animate__fadeInUp">
+                    <h1 class="error404__title">
+                        <span>4</span>
+                        <span>0</span>
+                        <span>4</span>
+                    </h1>
+                    <p class="error404__text">
                         Упс... похоже вы заблудились
                         <!--{en}Oops... looks like you're lost-->
                     </p>
-                    <a href="index.html" class="error404__btn animate__animated animate__fadeInUp">
+                    <a href="index.html" class="error404__btn">
                         На главную
                         <!--{en}Home-->
                     </a>
@@ -49,7 +53,13 @@
 
 
     <!-- Scripts -->
-    @@include('./blocks/main/_js.html')
+    <script src="./js/script-min.js"></script>
+    <script>
+        // --- Перевод страницы в зависимости от атрибута lang
+        var tran = new Translater({
+            lang: `${$("html").attr("lang")}`
+        });
+    </script>
 
 </body>
 

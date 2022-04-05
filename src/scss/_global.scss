@@ -1,6 +1,8 @@
 // --------- Varies ----------
 $font: "Roboto";
+// $font: "Roboto";
 $gray: #d8d8d8;
+$main: #00736C;
 
 // ------- Global-Tags --------
 html {
@@ -27,6 +29,7 @@ body {
     line-height: 23px;
     color: $gray;
     background-color: #000;
+    // background: radial-gradient(23.41% 54.94% at 43% 14.88%, #16141F 0%, #3D3941 0.01%, #12131B 97.85%);
     &.error404-page {
         background-color: #fff;
     }
@@ -63,7 +66,7 @@ section {
 
 // ----------- Global-Class -------------
 .container {
-    max-width: 1170px;
+    max-width: 1370px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -222,7 +225,7 @@ html[lang="en"] [lang="ru"] {
 
 // --------- Select-Text ----------
 ::selection {
-    background: rgba(48, 87, 58, 0.6) !important;
+    background: rgba($main, 0.6) !important;
 }
 
 // ---------  ----------
@@ -278,6 +281,7 @@ html[lang="en"] [lang="ru"] {
 .loaded {
     .preloader .preloader__block {
         animation: preloader__block 0.5s both;
+        pointer-events: none;
         @keyframes preloader__block {
             0% {
                 opacity: 1;
@@ -334,6 +338,7 @@ html[lang="en"] [lang="ru"] {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: -1;
     // z-index: 1000;
 }
 
@@ -431,7 +436,7 @@ html.has-scroll-smooth {
             animation-delay: 0.4s;
         }
         &::after {
-            animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation: rev-block 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         }
     }
 }
@@ -478,7 +483,7 @@ html.has-scroll-smooth {
             animation-delay: 0.7s;
         }
         &::after {
-            animation: rev-block2 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation: rev-block2 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
             animation-delay: 0.3s;
         }
     }
@@ -496,4 +501,21 @@ html.has-scroll-smooth {
         top: 100%;
         height: 0%;
     }
+}
+
+
+.cursor-dot-outline {
+    z-index: 1000;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(#fff, 1);
+    mix-blend-mode: difference;
 }
