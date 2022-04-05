@@ -210,6 +210,10 @@ html[lang="en"] [lang="ru"] {
     display: none;
 }
 
+img {
+    user-select: none;
+}
+
 // --------- ScrollBar ----------
 ::-webkit-scrollbar {
     width: 5px;
