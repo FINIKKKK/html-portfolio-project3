@@ -47,13 +47,15 @@
 
     <main class="main">
 
+        <!-- Particles -->
+        <canvas id="particles" class="particles" data-scroll-section></canvas>
 
-        <div class="first-screen">
+
+        <!-- first-screen
+        ======================================================= -->
+        <div class="first-screen" id="first-screen">
             @@include('./blocks/main/_header.html')
 
-
-            <!-- top
-            ======================================================= -->
             <section class="top" data-scroll data-scroll-section>
                 <div class="container">
                     <div class="top__inner">
@@ -64,7 +66,10 @@
                                 <h1 class="top__title" data-scroll data-scroll-speed="-1.5">Aerial</h1>
                                 <img src="./img/pattern2.png" width="306" height="388" loading="lazy" alt="" class="top__content-leaves">
                             </div>
-                            <p class="top__text" data-scroll data-scroll-speed="-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus autem sunt sit </p>
+                            <p class="top__text" data-scroll data-scroll-speed="-2">
+                                Первый в мире дрон для кинопроизводства, в котором интегрирована система передачи HD-видео
+                                <!--{en}The world's first film production drone with an integrated HD video transmission system-->
+                            </p>
 
                             <a href="#about" class="top__btn" data-scroll-to data-scroll data-scroll-speed=-1.5">Let's go</a>
                         </div>
@@ -75,11 +80,15 @@
                             <div class="top__img-items">
                                 <div class="top__img-item">
                                     <h6 class="top__img-title">
-                                        Dlog-M 10 бит</h6>
+                                        Dlog-M 10 бит
+                                        <!--{en}Dlog-M 10 bit-->
+                                    </h6>
                                 </div>
                                 <div class="top__img-item">
                                     <h6 class="top__img-title">
-                                        Камера Hasselblad</h6>
+                                        Камера Hasselblad
+                                        <!--{en}Camera Hasselblad-->
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -88,15 +97,24 @@
 
                     <div class="top__benefits" data-scroll data-scroll-speed="-1.5">
                         <div class="top__benefits-item">
-                            <h5 class="top__item-title">Battery life
-                            </h5>
-                            <p class="top__item-text">Mavic 2 Pro Battery Capacity Increased to 31 Minutes of Flight Power on a Single Charge</p>
-                        </div>
-                        <div class="top__benefits-item">
-                            <h5 class="top__item-title">Mavic in flight
+                            <h5 class="top__item-title">
+                                Запас батареи
+                                <!--{en}Battery life-->
                             </h5>
                             <p class="top__item-text">
-                                The remote has such a fast response that many have to reduce its sensitivity - it responds so quickly to commands.</p>
+                                Емкость аккумулятора Mavic Pro Aerial увеличена, теперь запас летного хода на одной зарядке составляет 31 минуту
+                                <!--{en}Mavic Pro Aerial Battery Capacity Increased to 31 Minutes of Flight Power on a Single Charge-->
+                            </p>
+                        </div>
+                        <div class="top__benefits-item">
+                            <h5 class="top__item-title">
+                                Mavic в полете
+                                <!--{en}Mavic in flight-->
+                            </h5>
+                            <p class="top__item-text">
+                                Пульт имеет настолько быстрый отклик, что многим приходится снижать его чувствительность – так скоро он реагирует на команды.
+                                <!--{en}The remote has such a fast response that many have to reduce its sensitivity - it responds so quickly to commands.-->
+                            </p>
                         </div>
                     </div>
 
@@ -126,31 +144,9 @@
                     </div>
                 </div>
             </section>
-            <!-- top end -->
         </div>
-
-
-        <!-- top
-     ======================================================= -->
-        <!-- <section class="top" id="first-screen" data-scroll-section>
-        <div class="top__inner">
-            <h1 class="top__title">MAVIC 2 PRO</h1>
-            <div class="top-bg">
-                <img src="./img/bg--top.jpg" alt="">
-            </div>
-            <div class="top-mavic">
-                <img src="./img/mavic.png" alt="">
-            </div>
-            <div class="top-leaves">
-                <img src="./img/leaves.png" alt="">
-            </div>
-        </div>
-    </section> -->
         <!-- top end -->
 
-
-
-        <canvas id="particles" class="particles" data-scroll-section></canvas>
 
         <!-- about
         ======================================================= -->
@@ -163,24 +159,24 @@
                             <span data-scroll data-scroll-speed="1">Что такое
                                 <!--{en}What is -->
                             </span>
-                            <span class="title-border" data-scroll data-scroll-speed="1.5">Mavic 2 Pro?</span>
+                            <span class="title-border" data-scroll data-scroll-speed="1.5">Aerial ?</span>
                         </h2>
 
                         <hr class="about__content-line" data-scroll data-scroll-speed="2">
                         </hr>
 
                         <p class="about__content-text" data-scroll data-scroll-speed="2">
-                            Дрон Mavic 2 Pro - это инженерное чудо, идеальное для аэросъемки.
+                            Дрон Mavic Pro Aerial - это инженерное чудо, идеальное для аэросъемки.
                             Дрон
                             обладает всеми лучшими технологиями DJI, он преобразит мир аэросъемки.
-                            <!--{en}The Mavic 2 Pro drone is an engineering marvel perfect for aerial photography. The drone has all the best DJI technology, it will transform the world of aerial photography.-->
+                            <!--{en}The Mavic Pro Aerial drone is an engineering marvel perfect for aerial photography. The drone has all the best DJI technology, it will transform the world of aerial photography.-->
                         </p>
 
-                        <img src="./img/pattern.png" width="550" height="550" loading="lazy" alt="pattern" class="about__content-pattern">
+                        <img src="./img/pattern.png" width="450" height="450" loading="lazy" alt="pattern" class="about__content-pattern">
                     </div>
 
                     <div class="about__img" data-scroll data-scroll-speed="-1.5" data-scroll-offset="300">
-                        <img src="./img/about__img.png" width="560" height="340" loading="lazy" alt="mavic" class="fadeUp">
+                        <img src="./img/about__img.png" width="789" height="400" loading="lazy" alt="mavic" class="fadeUp" data-scroll>
                     </div>
                 </div>
             </div>
@@ -195,7 +191,7 @@
                 <div class="benefits__inner">
                     <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
                         <div class="benefits__item-icon" data-scroll data-scroll-speed="2">
-                            <svg width="20" height="20">
+                            <svg width="80" height="80">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon1" />
                             </svg>
                         </div>
@@ -204,13 +200,13 @@
                             <!--{en}Battery life-->
                         </h4>
                         <p class="benefits__item-text" data-scroll data-scroll-speed="2.5">
-                            Емкость аккумулятора Mavic 2 Pro увеличена, теперь запас летного хода на одной зарядке составляет 31 минуту
-                            <!--{en}Mavic 2 Pro Battery Capacity Increased to 31 Minutes of Flight Power on a Single Charge-->
+                            Емкость аккумулятора Mavic Pro Aerial увеличена, теперь запас летного хода на одной зарядке составляет 31 минуту
+                            <!--{en}Mavic Pro Aerial Battery Capacity Increased to 31 Minutes of Flight Power on a Single Charge-->
                         </p>
                     </div>
                     <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
                         <div class="benefits__item-icon" data-scroll data-scroll-speed="4">
-                            <svg width="20" height="20">
+                            <svg width="80" height="80">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon2" />
                             </svg>
                         </div>
@@ -225,7 +221,7 @@
                     </div>
                     <div class="benefits__item fadeUp" data-scroll data-scroll-offset="250">
                         <div class="benefits__item-icon" data-scroll data-scroll-speed="2">
-                            <svg width="20" height="20">
+                            <svg width="80" height="80">
                                 <use xlink:href="./img/icons/icons.svg#benefits__item-icon3" />
                             </svg>
                         </div>
@@ -306,11 +302,11 @@
                                 <!--{en}The best unmanned aerial photography technology-->
                             </h5>
                             <p class="info__welcome-text fadeUp" data-scroll data-scroll-offset="100">
-                                Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c.
+                                Mavic Pro Aerial оснащен совершенно новой камерой Hasselblad L1D-20c.
                                 Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5,
                                 позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и
                                 потрясающими цветами.
-                                <!--{en}The Mavic 2 Pro features the all-new Hasselblad L1D-20c camera. The L1D-20c features Hasselblad's unique Natural Color Solution (HNCS)5 technology, allowing users to capture stunning aerial shots with 20 megapixel resolution and stunning colors.-->
+                                <!--{en}The Mavic Pro Aerial features the all-new Hasselblad L1D-20c camera. The L1D-20c features Hasselblad's unique Natural Color Solution (HNCS)5 technology, allowing users to capture stunning aerial shots with 20 megapixel resolution and stunning colors.-->
                             </p>
                         </div>
                     </div>
@@ -330,14 +326,14 @@
                                 <img src="./img/info__img-1.jpg" width="420" height="390" loading="lazy" alt="info__content-img1" class="fadeUp" data-scroll data-scroll-offset="200">
                             </div>
                             <p class="info__content-text fadeAfter" data-scroll data-scroll-speed="3" data-scroll-offset="200"><span>
-                                    Качество картинки теперь ничем не хуже изображений полученных при помощи зеркальных фотокамер, а видео 4K позволяет использовать дрон DJI Mavic 2 Pro для кинематографических целей.
-                                    <!--{en}Picture quality is now as good as that of a DSLR, and 4K video makes it possible to use the DJI Mavic 2 Pro drone for cinematic purposes.-->
+                                    Качество картинки теперь ничем не хуже изображений полученных при помощи зеркальных фотокамер, а видео 4K позволяет использовать дрон DJI Mavic Pro Aerial для кинематографических целей.
+                                    <!--{en}Picture quality is now as good as that of a DSLR, and 4K video makes it possible to use the DJI Mavic Pro Aerial drone for cinematic purposes.-->
                                 </span></p>
                         </div>
                         <div class="info__content-img info__content-img2" data-scroll data-scroll-speed="1">
                             <img src="./img/info__img-2.jpg" width="420" height="390" loading="lazy" alt="info__content-img2" class="fadeUp" data-scroll data-scroll-offset="0">
                         </div>
-                        <img src="./img/leaves2.png" width="" height="" loading="lazy" alt="pattern" class="info__content-pattern">
+                        <img src="./img/pattern3.png" width="700" height="1020" loading="lazy" alt="pattern" class="info__content-pattern">
                     </div>
                 </div>
             </div>
@@ -354,8 +350,8 @@
                         <div class="overview__content">
                             <div class="overview__info" data-scroll data-scroll-speed="-1">
                                 <h5 class="overview__content-title fadeUp" data-scroll data-scroll-offset="550">
-                                    Дрон DJI Mavic 2 Pro
-                                    <!--{en}Drone DJI Mavic 2 Pro-->
+                                    DJI Mavic Pro Aerial
+                                    <!--{en}DJI Mavic Pro Aerial-->
                                 </h5>
                                 <p class="overview__content-text fadeUp" data-scroll data-scroll-offset="550">
                                     Полностью обновленная модель с камерой Hasselblad на борту,
@@ -363,7 +359,7 @@
                                     <!--{en}A completely redesigned model with a Hasselblad camera on board, a 1″ CMOS sensor and the ability to shoot in Hyperlapse mode.-->
                                 </p>
                             </div>
-                            <img src="./img/pattern.png" width="720" height="720" loading="lazy" alt="pattern" class="overview__content-pattern" data-scroll data-scroll-speed="1">
+                            <img src="./img/pattern.png" width=650" height="650" loading="lazy" alt="pattern" class="overview__content-pattern">
                         </div>
                         <div class="overview__img fadeAfterImg" data-scroll data-scroll-offset="300" data-scroll-speed="1">
                             <img src="./img/overview__img.jpg" width="485" height="485" loading="lazy" alt="overview__img">
@@ -389,22 +385,22 @@
                         <li class="accordion__item active fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
                                 <h5 class="accordion__item-title">
-                                    Чем Mavic 2 лучше Mavic Pro?
-                                    <!--{en}How is the Mavic 2 better than the Mavic Pro?-->
+                                    Чем Mavic Pro Aerial лучше Mavic 2 Pro?
+                                    <!--{en}How is the Mavic Pro Aerial better than the Mavic 2 Pro?-->
                                 </h5>
                                 <button class="accordion__item-btn"></button>
                             </div>
 
                             <p class="accordion__item-answer" style="display: block;">
-                                В Mavic 2 улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс)
-                                <!--{en}The Mavic 2 has improved almost every aspect: Camera, Video Transmission, Flight Time, Speed, Noise, Multi-Directional Obstacle Detection, Intelligent Functions, and Unique Hyperlapse-->
+                                В Mavic Pro Aerial улучшены практически все аспекты: камера, передача видеосигнала, полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях, интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс)
+                                <!--{en}The Mavic Pro Aerial has improved almost every aspect: Camera, Video Transmission, Flight Time, Speed, Noise, Multi-Directional Obstacle Detection, Intelligent Functions, and Unique Hyperlapse-->
                             </p>
                         </li>
                         <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
                                 <h5 class="accordion__item-title">
-                                    Какая максимальная дальность полета Mavic 2?
-                                    <!--{en}What is the maximum range of the Mavic 2?-->
+                                    Какая максимальная дальность полета Mavic Pro Aerial?
+                                    <!--{en}What is the maximum range of the Mavic Pro Aerial?-->
                                 </h5>
                                 <button class="accordion__item-btn"></button>
                             </div>
@@ -417,22 +413,22 @@
                         <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
                                 <h5 class="accordion__item-title">
-                                    Какое фокусное расстояние у Mavic 2 Pro?
-                                    <!--{en}What is the focal length of the Mavic 2 Pro?-->
+                                    Какое фокусное расстояние у Mavic Pro Aerial?
+                                    <!--{en}What is the focal length of the Mavic Pro Aerial?-->
                                 </h5>
                                 <button class="accordion__item-btn"></button>
                             </div>
 
                             <p class="accordion__item-answer">
-                                Камера Mavic 2 Pro с оптическим зумом 24–48 мм поддерживает съемку видео 1080p с 4-кратным зумом без потерь.
-                                <!--{en}The Mavic 2 Pro's 24-48mm optical zoom camera supports 1080p video capture with 4x lossless zoom.-->
+                                Камера Mavic Pro Aerial с оптическим зумом 24–48 мм поддерживает съемку видео 1080p с 4-кратным зумом без потерь.
+                                <!--{en}The Mavic Pro Aerial's 24-48mm optical zoom camera supports 1080p video capture with 4x lossless zoom.-->
                             </p>
                         </li>
                         <li class="accordion__item fadeUp" data-scroll data-scroll-offset="400">
                             <div class="accordion__item-header">
                                 <h5 class="accordion__item-title">
-                                    Водонепроницаемый ли Mavic 2?
-                                    <!--{en}Is the Mavic 2 waterproof?-->
+                                    Водонепроницаемый ли Mavic Pro Aerial?
+                                    <!--{en}Is the Mavic Pro Aerial waterproof?-->
                                 </h5>
                                 <button class="accordion__item-btn"></button>
                             </div>
