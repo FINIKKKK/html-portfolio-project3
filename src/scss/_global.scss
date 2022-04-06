@@ -390,7 +390,7 @@ html.has-scroll-smooth {
             animation-delay: 0.4s;
         }
         &::after {
-            animation: rev-block 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation: rev-block 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         }
     }
 }
@@ -434,11 +434,10 @@ html.has-scroll-smooth {
     &.is-inview {
         img {
             animation: appear-text 0.0001s linear forwards;
-            animation-delay: 0.7s;
+            animation-delay: 0.4s;
         }
         &::after {
-            animation: rev-block2 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-            animation-delay: 0.3s;
+            animation: rev-block2 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         }
     }
 }
