@@ -35,8 +35,8 @@
         }
         &:hover {
             a {
-                color: $main !important;
-                text-shadow: 0 0 15px rgba($main, 0.9);
+                // color: $main !important;
+                // text-shadow: 0 0 15px rgba($main, 0.9);
             }
         }
     }
@@ -71,7 +71,7 @@
         }
         &:hover {
             svg {
-                fill: $main;
+                // fill: $main;
             }
         }
     }
@@ -92,7 +92,7 @@
             color: rgba(#fff, 0.75);
         }
         &:hover {
-            color: $main;
+            // color: $main;
         }
     }
     .languages__list-item:nth-child(1) {
@@ -461,8 +461,8 @@
         }
         &:hover {
             a {
-                color: rgba($main, 1);
-                text-shadow: 0 0 5px rgba($main, 1);
+                // color: rgba($main, 1);
+                // text-shadow: 0 0 5px rgba($main, 1);
             }
         }
     }
@@ -1267,8 +1267,8 @@
         }
         .soclist__item:hover {
             a {
-                text-shadow: 0 0 15px rgba($main, 1);
-                color: $main;
+                // text-shadow: 0 0 15px rgba($main, 1);
+                // color: $main;
             }
         }
     }
@@ -1293,8 +1293,8 @@
     }
     .footer__list .menu__list-item:hover {
         a {
-            text-shadow: 0 0 15px rgba($main, 1);
-            color: $main;
+            // text-shadow: 0 0 15px rgba($main, 1);
+            // color: $main;
         }
     }
     .footer__copy {

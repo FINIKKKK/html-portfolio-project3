@@ -456,6 +456,9 @@
 
 //Max-Width: 700px ================================
 @media (max-width: 700px) {
+    .cursor {
+        display: none;
+    }
     .benefits {
         padding-top: 0px;
         padding-bottom: 110px;
