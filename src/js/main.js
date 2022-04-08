@@ -8,41 +8,31 @@ $('.hamburger').on('click', function () {
 
 // --- Поочередная анимация появления characteristic
 $(document).ready(function () {
-    var characteristicAnim = function () {
-        var active = $('.characteristic__item.active');
-        active.removeClass('active');
-        active.nextOrFirst().addClass('active');
-    }
-
-    interval = setInterval(characteristicAnim, 5000);
-
-    $.fn.nextOrFirst = function (selector) {
-        var next = this.next(selector);
-        return (next.length) ? next : this.prevAll(selector).last();
-    };
-
-    // --- Кпопки на "Characteristic"
-    $(".characteristic__item-btn").on('click', function () {
-        clearInterval(interval);
-
-        $(".characteristic__item").removeClass("active");
-        $(this).parent().addClass("active");
+    if ($(window).width() > 700) {
+        var characteristicAnim = function () {
+            var active = $('.characteristic__item.active');
+            active.removeClass('active');
+            active.nextOrFirst().addClass('active');
+        }
 
         interval = setInterval(characteristicAnim, 5000);
-    })
-});
 
+        $.fn.nextOrFirst = function (selector) {
+            var next = this.next(selector);
+            return (next.length) ? next : this.prevAll(selector).last();
+        };
 
+        // --- Кпопки на "Characteristic"
+        $(".characteristic__item-btn").on('click', function () {
+            clearInterval(interval);
 
-// --- Аккордион
-$(function () {
-    $('.accordion').find('.accordion__item-header').click(function () {
+            $(".characteristic__item").removeClass("active");
+            $(this).parent().addClass("active");
 
-        $('.accordion__item').removeClass('active');
-        $(this).next().slideDown('fast');
-        $('.accordion__item-answer').not($(this).next()).slideUp('slow');
-        $(this).parent().addClass('active');
-    });
+            interval = setInterval(characteristicAnim, 5000);
+        })
+    }
+
 });
 
 
@@ -110,6 +100,19 @@ $(document).ready(function () {
 
 
 
+// --- Locomotive Scroll (Smoth)
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    smoothMobile: true,
+});
+scroll.destroy();
+document.addEventListener("DOMContentLoaded", function (event) {
+    scroll.init();
+});
+
+
+
 // --- Проверка геолокации и автоматическое определение языка страницы
 $.ajax({
     url: "https://get.geojs.io/v1/ip/geo.js",
@@ -130,6 +133,7 @@ $.ajax({
         var tran = new Translater({
             lang: `${$("html").attr("lang")}`
         });
+        scroll.update();
 
         // Смена активного элемента в списке языков
         if ($("html").attr("lang") === 'ru') {
@@ -179,6 +183,8 @@ $.ajax({
             }
 
             checkLang();
+
+            scroll.update();
         });
         $('.languages__icon').click(function () {
             let ln1 = $('.languages__item-eng').html();
@@ -188,21 +194,28 @@ $.ajax({
             $('.languages__item-rus').html(ln1);
 
             checkLang();
+
+            scroll.update();
         });
     }
 });
 
 
 
-// --- Locomotive Scroll (Smoth)
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    smoothMobile: true,
-});
-scroll.destroy();
-document.addEventListener("DOMContentLoaded", function (event) {
-    scroll.init();
+// --- Аккордион
+$(function () {
+    $('.accordion').find('.accordion__item-header').click(function () {
+
+        $('.accordion__item').removeClass('active');
+        $(this).next().slideDown('fast');
+        $('.accordion__item-answer').not($(this).next()).slideUp('slow');
+        $(this).parent().addClass('active');
+
+        setTimeout(function () {
+            scroll.update();
+        }, 800);
+
+    });
 });
 
 

@@ -747,6 +747,17 @@ img {
           transform: none;
 }
 
+.fadeIn {
+  opacity: 0;
+  -webkit-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fadeIn.is-inview {
+  opacity: 1;
+}
+
 .fadeAfter {
   position: relative;
   display: inline-block;
@@ -2268,12 +2279,10 @@ html[lang="en"] [lang="ru"] {
 
 .info__content-pattern {
   width: 700px;
+  height: 1020px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 20%;
+  top: 30%;
   z-index: -1;
 }
 
@@ -2283,6 +2292,7 @@ html[lang="en"] [lang="ru"] {
 }
 
 .overview {
+  display: none;
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -3852,7 +3862,7 @@ html[lang="en"] [lang="ru"] {
   .info__content-pattern {
     width: 600px;
     height: auto;
-    top: 55%;
+    top: 25%;
   }
 
   .info__welcome {

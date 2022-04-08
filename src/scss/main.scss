@@ -753,7 +753,7 @@
     }
     &__item:nth-child(2) {
         left: 410px;
-    top: 11%;
+        top: 11%;
         .characteristic__item-btn {
             position: absolute;
             bottom: -5%;
@@ -937,10 +937,10 @@
     }
     &__content-pattern {
         width: 700px;
+        height: 1020px;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 20%;
+        top: 30%;
         z-index: -1;
     }
     .info__content-title {
@@ -952,6 +952,7 @@
 
 // --------- overview ----------
 .overview {
+    display: none;
     overflow: hidden;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1035,7 +1036,7 @@
     position: relative;
     &__inner {
         width: 85%;
-        margin: 0 auto; 
+        margin: 0 auto;
         color: #fff;
         display: flex;
         flex-direction: column;
