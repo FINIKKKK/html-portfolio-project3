@@ -6,7 +6,7 @@
 <body data-scroll-container>
 
     <!-- Preloader -->
-    <div class="preloader">
+    <div class="preloader"> 
         <div class="preloader__block">
             <div class='container-spinner'>
                 <div class='spinner'>
@@ -24,11 +24,7 @@
                 <defs>
                     <filter id='goo'>
                         <feGaussianBlur in='SourceGraphic' stdDeviation='8' result='blur' />
-                        <feColorMatrix in='blur' mode='matrix' values='
-                                                                   1 0 0 0 0 
-                                                                   0 1 0 0 0
-                                                                   0 0 1 0 0
-                                                                   0 0 0 50 -8' result='goo' />
+                        <feColorMatrix in='blur' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 -8' result='goo' />
                         <feBlend in='SourceGraphic' in2='goo' />
                     </filter>
                 </defs>
@@ -43,7 +39,7 @@
     <main class="main">
 
         <!-- Particles -->
-        <!-- <canvas id="particles" class="particles" data-scroll-section></canvas> -->
+        <canvas id="particles" class="particles" data-scroll-section></canvas>
 
 
         <!-- first-screen
@@ -59,18 +55,18 @@
                             <div class="top__content-title">
                                 <h3 class="top__subtitle" data-scroll data-scroll-speed="-1">Mavic Pro</h3>
                                 <h1 class="top__title" data-scroll data-scroll-speed="-1.5">Aerial</h1>
-                                <img src="./img/pattern2.png" width="306" height="388" loading="lazy" alt="" class="top__content-leaves">
+                                <img src="./img/pattern2.png" width="306" height="388" loading="lazy" alt="pattern" class="top__content-leaves">
                             </div>
                             <p class="top__text" data-scroll data-scroll-speed="-2">
                                 Первый в мире дрон для кинопроизводства, в котором интегрирована система передачи HD-видео
                                 <!--{en}The world's first film production drone with an integrated HD video transmission system-->
                             </p>
 
-                            <a href="#about" class="top__btn" data-scroll-to data-scroll data-scroll-speed=-1.5">Let's go</a>
+                            <a href="#about" class="top__btn" data-scroll-to data-scroll data-scroll-speed="-1.5">Let's go</a>
                         </div>
 
                         <div class="top__img" data-scroll data-scroll-speed="1">
-                            <img src="./img/mavic.png" width="738" height="" loading="lazy" alt="480">
+                            <img src="./img/mavic.png" width="738" height="480" loading="lazy" alt="mavic">
 
                             <div class="top__img-items">
                                 <div class="top__img-item">
@@ -158,7 +154,6 @@
                         </h2>
 
                         <hr class="about__content-line" data-scroll data-scroll-speed="2">
-                        </hr>
 
                         <p class="about__content-text" data-scroll data-scroll-speed="2">
                             Дрон Mavic Pro Aerial - это инженерное чудо, идеальное для аэросъемки.
@@ -361,19 +356,19 @@
             <div class="overview__wrapper" data-scroll data-scroll-offset="550">
                 <div class="container">
                     <div class="overview__inner">
-                        <div class="overview__content fadeIn" data-scroll data-scroll-offset="450">
+                        <div class="overview__content">
                             <div class="overview__info" data-scroll data-scroll-speed="-1">
-                                <h5 class="overview__content-title">
+                                <h5 class="overview__content-title fadeIn" data-scroll data-scroll-offset="450">
                                     DJI Mavic Pro Aerial
                                     <!--{en}DJI Mavic Pro Aerial-->
                                 </h5>
-                                <p class="overview__content-text">
+                                <p class="overview__content-text fadeIn" data-scroll data-scroll-offset="450">
                                     Полностью обновленная модель с камерой Hasselblad на борту,
                                     CMOS-матрицей размером 1″ и возможностью съемки в режиме Hyperlapse.
                                     <!--{en}A completely redesigned model with a Hasselblad camera on board, a 1″ CMOS sensor and the ability to shoot in Hyperlapse mode.-->
                                 </p>
                             </div>
-                            <img src="./img/pattern.png" width=650" height="650" loading="lazy" alt="pattern" class="overview__content-pattern">
+                            <img src="./img/pattern.png" width="650" height="650" loading="lazy" alt="pattern" class="overview__content-pattern">
                         </div>
                         <div class="overview__img fadeAfterImg" data-scroll data-scroll-offset="300" data-scroll-speed="1">
                             <img src="./img/overview__img.jpg" width="485" height="485" loading="lazy" alt="overview__img">
@@ -466,7 +461,6 @@
 
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     @@include('./blocks/main/_js.html')
 
 </body>

@@ -264,6 +264,7 @@
 // --------- top ----------
 .top {
     border-bottom: 2px solid rgba(#fff, 0.1);
+    z-index: 1000;
     .container {
         position: relative;
     }
@@ -480,8 +481,6 @@
     }
     .top__line:nth-child(1) {
         left: 0%;
-        animation: topLine1 1.25s both ease-in-out;
-        animation-delay: 1.5s;
     }
     @keyframes topLine1 {
         99% {
@@ -499,8 +498,6 @@
     }
     .top__line:nth-child(2) {
         left: 25%;
-        animation: topLine2 1.25s both ease-in-out;
-        animation-delay: 1.5s;
     }
     @keyframes topLine2 {
         99% {
@@ -518,8 +515,6 @@
     }
     .top__line:nth-child(3) {
         left: 50%;
-        animation: topLine3 1.25s both ease-in-out;
-        animation-delay: 1.5s;
     }
     @keyframes topLine3 {
         99% {
@@ -537,8 +532,6 @@
     }
     .top__line:nth-child(4) {
         left: 75%;
-        animation: topLine4 1.25s both ease-in-out;
-        animation-delay: 1.5s;
     }
     @keyframes topLine4 {
         99% {
@@ -552,6 +545,36 @@
             left: 100%;
             background-color: rgba(#fff, 0.1);
             z-index: -1;
+        }
+    }
+}
+body.loaded {
+    .top {
+        animation: zindex 0.0001s both;
+        animation-delay: 1.7s;
+        @keyframes zindex {
+            0% {
+                z-index: 1000;
+            }
+            100% {
+                z-index: 10;
+            }
+        }
+        .top__line:nth-child(1) {
+            animation: topLine1 1.25s both ease-in-out;
+            animation-delay: 0.5s;
+        }
+        .top__line:nth-child(2) {
+            animation: topLine2 1.25s both ease-in-out;
+            animation-delay: 0.5s;
+        }
+        .top__line:nth-child(3) {
+            animation: topLine3 1.25s both ease-in-out;
+            animation-delay: 0.5s;
+        }
+        .top__line:nth-child(4) {
+            animation: topLine4 1.25s both ease-in-out;
+            animation-delay: 0.5s;
         }
     }
 }
@@ -952,7 +975,6 @@
 
 // --------- overview ----------
 .overview {
-    display: none;
     overflow: hidden;
     padding-top: 100px;
     padding-bottom: 100px;

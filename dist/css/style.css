@@ -1337,6 +1337,7 @@ html[lang="en"] [lang="ru"] {
 
 .top {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
 }
 
 .top .container {
@@ -1631,10 +1632,6 @@ html[lang="en"] [lang="ru"] {
 
 .top .top__line:nth-child(1) {
   left: 0%;
-  -webkit-animation: topLine1 1.25s both ease-in-out;
-          animation: topLine1 1.25s both ease-in-out;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes topLine1 {
@@ -1671,10 +1668,6 @@ html[lang="en"] [lang="ru"] {
 
 .top .top__line:nth-child(2) {
   left: 25%;
-  -webkit-animation: topLine2 1.25s both ease-in-out;
-          animation: topLine2 1.25s both ease-in-out;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes topLine2 {
@@ -1711,10 +1704,6 @@ html[lang="en"] [lang="ru"] {
 
 .top .top__line:nth-child(3) {
   left: 50%;
-  -webkit-animation: topLine3 1.25s both ease-in-out;
-          animation: topLine3 1.25s both ease-in-out;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes topLine3 {
@@ -1751,10 +1740,6 @@ html[lang="en"] [lang="ru"] {
 
 .top .top__line:nth-child(4) {
   left: 75%;
-  -webkit-animation: topLine4 1.25s both ease-in-out;
-          animation: topLine4 1.25s both ease-in-out;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes topLine4 {
@@ -1787,6 +1772,61 @@ html[lang="en"] [lang="ru"] {
     background-color: rgba(255, 255, 255, 0.1);
     z-index: -1;
   }
+}
+
+body.loaded .top {
+  -webkit-animation: zindex 0.0001s both;
+          animation: zindex 0.0001s both;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+@-webkit-keyframes zindex {
+  0% {
+    z-index: 1000;
+  }
+
+  100% {
+    z-index: 10;
+  }
+}
+
+@keyframes zindex {
+  0% {
+    z-index: 1000;
+  }
+
+  100% {
+    z-index: 10;
+  }
+}
+
+body.loaded .top .top__line:nth-child(1) {
+  -webkit-animation: topLine1 1.25s both ease-in-out;
+          animation: topLine1 1.25s both ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body.loaded .top .top__line:nth-child(2) {
+  -webkit-animation: topLine2 1.25s both ease-in-out;
+          animation: topLine2 1.25s both ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body.loaded .top .top__line:nth-child(3) {
+  -webkit-animation: topLine3 1.25s both ease-in-out;
+          animation: topLine3 1.25s both ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body.loaded .top .top__line:nth-child(4) {
+  -webkit-animation: topLine4 1.25s both ease-in-out;
+          animation: topLine4 1.25s both ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .about {
@@ -2292,7 +2332,6 @@ html[lang="en"] [lang="ru"] {
 }
 
 .overview {
-  display: none;
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 100px;
