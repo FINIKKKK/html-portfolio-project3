@@ -66,6 +66,10 @@ section {
 }
 img {
     user-select: none;
+    pointer-events: none;
+}
+* {
+    user-select: none;
 }
 
 // ------- Global-Class --------
