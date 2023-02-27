@@ -1,4 +1,4 @@
-# Project 3 👕
+# Project 3 🕹
 
 - This project was previously included in my portfolio for web development.
 - This project is a landing page designed to promote the Mavic Pro Aerial drone.
